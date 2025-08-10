@@ -202,13 +202,15 @@ Performace matrics , after entering prompt
 
 
 ## ⚡ Troubleshooting
-Issue	Possible Cause	Solution
-Permission denied when running Docker	User not in docker group	Run: sudo usermod -aG docker $USER && newgrp docker
-nvidia-ctk: command not found	NVIDIA Container Toolkit not installed correctly	Re-run NVIDIA Toolkit install steps in Section 7
-nvidia-smi not showing GPU	NVIDIA drivers missing or VM not GPU-enabled	Check VM specs in Hyperstack → redeploy with GPU
-docker: Error response from daemon: could not select device driver "" with capabilities: [[gpu]]	Docker not configured with NVIDIA runtime	Run: sudo nvidia-ctk runtime configure --runtime=docker && sudo systemctl restart docker
-Connection timed out in PuTTY	Wrong IP or firewall rules not set	Verify VM public IP and inbound rules for port 22
-WebUI not loading	Port not open or container stopped	Check with: docker ps and ensure port 3000 is in inbound rules
+
+| Issue | Possible Cause | Solution |
+|-------|----------------|----------|
+| Permission denied when running Docker | User not in docker group | Run: `sudo usermod -aG docker $USER && newgrp docker` |
+| `nvidia-ctk: command not found` | NVIDIA Container Toolkit not installed correctly | Re-run NVIDIA Toolkit install steps in Section 7 |
+| `nvidia-smi` not showing GPU | NVIDIA drivers missing or VM not GPU-enabled | Check VM specs in Hyperstack → redeploy with GPU |
+| `docker: Error response from daemon: could not select device driver "" with capabilities: [[gpu]]` | Docker not configured with NVIDIA runtime | Run: `sudo nvidia-ctk runtime configure --runtime=docker && sudo systemctl restart docker` |
+| Connection timed out in PuTTY | Wrong IP or firewall rules not set | Verify VM public IP and inbound rules for port 22 |
+| WebUI not loading | Port not open or container stopped | Check with: `docker ps` and ensure port 3000 is in inbound rules |
 
 ---
 
