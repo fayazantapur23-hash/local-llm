@@ -72,7 +72,7 @@ A complete, step-by-step guide to run **gpt-oss:120b** locally on a Hyperstack V
 ## 4️⃣ Connect to VM via PuTTY
 1. Open **PuTTY**
 2. Enter **VM IP & Port**
-3. Go to **SSH → Auth** → Browse `.ppk` file
+3. Go to **Connection → SSH → Auth → Credentials** → Browse `.ppk` file
 4. Connect → Login as `ubuntu`  
    ![PuTTY Login](https://github.com/user-attachments/assets/8fd11636-2569-493a-a348-31305d9a4b3a)
 
